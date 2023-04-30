@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick-theme.css";
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+@font-face {
+    font-family: "MYRIADPRO";
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/MYRIADPRO-REGULAR.OTF') format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url(../assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf) format('Cormorant Garamond');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
+
+.video-tour {
+   z-index: 1;
+ }
+.video-tour:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #000;
+    transition: all 0.3s ease;
+    border-radius: 24px;
+    border:none;
+}
+.video-tour:hover {
+    color: #FFF;
+    border:none;
+  }
+  .video-tour:hover:after {
+    top: 0;
+    height: 100%;
+  }
+.button__bar li {
+    margin: 0 !important;
+    width: 10px;
+    height: 10px;
+}
+
+.button__bar {
+    bottom: 26px !important;
+}
+
+@media screen and (max-width:1024px) {
+    .button__bar {
+        bottom: 12px !important;
+    }
+}
+
+.similar__bar .slick-active button {
+    width: 6px;
+    height: 6px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    background: #ffffff;
+    border-radius: 100%;
+}
+.button__bar li button{
+    width: 6px;
+    height: 6px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    background: #ffffff;
+    border-radius: 100%;
+    padding:0
+}
+.button__bar .slick-active{
+    margin-right:4px!important;
+}
+.button__bar .slick-active button {
+    width: 10px;
+    height: 10px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    background: #ffffff;
+    border-radius: 100%;
+    padding:0
+}
+
+.button__bar li button::before {
+    display: none;
+}
+
+.similar__bar {
+    bottom: -75px !important;
+}
+
+.similar__bar li button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100% !important;
+    border: 1px solid white !important
+}
+
+.similar__bar li button::before {
+    display: none;
+}
+
+/*3d slider css*/
+.slider {
+    margin: 0 auto;
+}
+
+
+
+select option {
+    background: black;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: none;
+    padding: 12px 0;
+}
+
+.dslide {
+    transform: scale(0.7);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+.dslide img {
+    margin: 0 auto;
+}
+.featuredApartments .dslide {
+    transform: scale(0.93);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.popularAreas .dslide {
+    transform: scale(0.85);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.downtown .dslide {
+    transform: scaleY(0.7);
+    transition: transform 300ms;
+    opacity: 0.75;
+}
+
+.fslide {
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.ActiveSlide {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.activeSlide {
+    transform: scale(1.33);
+    opacity: 1;
+}
+
+.banner {
+    background-image: url('/images/product/01.avif');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.banner::before {
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* hiding all bullets by default */
+.explore {
+    letter-spacing: 1px;
+    background: none;
+    color: white;
+    position: relative;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 190px;
+    font-size: 14px;
+    z-index: 2;
+    transition: .01s .23s ease-out all;
+    overflow: hidden;
+}
+
+.explore::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    background: #202020;
+    z-index: -1;
+    transition: .3s ease-in all;
+}
+
+.explore::after {
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: 5%;
+    height: 90%;
+    width: 5%;
+    background: white;
+    z-index: -1;
+    transition: .4s .02s ease-in all;
+}
+
+.explore:hover {
+    cursor: pointer;
+    color: transparent;
+}
+
+.explore:hover::before {
+    left: 100%;
+    width: 25%;
+}
+
+.explore:hover::after {
+    left: 100%;
+    width: 70%;
+}
+
+.explore:hover .icon-right.after:after {
+    left: -80px;
+    color: white;
+    transition: 0.2s 0.2s ease all;
+}
+
+.explore:hover .icon-right.after:before {
+    left: -104px;
+    top: 14px;
+    opacity: 0.2;
+    color: white;
+}
+
+.icon-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.icon-right:after {
+    font-family: "FontAwesome";
+    content: '\2192';
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    top: 26px;
+    transform: translate3D(0, -50%, 0);
+}
+
+.icon-right.after:after {
+    left: -250px;
+    color: black;
+    transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
+}
+
+.icon-right.after:before {
+    content: 'Submit';
+    position: absolute;
+    left: -230px;
+    top: 14px;
+    opacity: 0;
+    transition: 0.2s ease-in all;
+}
+
+
+.featuredApartments .slick-prev {
+    left: 15px;
+    z-index: 100;
+}
+.featuredApartments .slick-next {
+    right: 15px;
+    z-index: 100;
+}
+.featuredApartments .slick-prev::before,
+.featuredApartments .slick-next::before {
+    font-size: 30px;
+}
+.offPlan ::-webkit-scrollbar {
+    display: none;
+}
+  
+.popularAreas .slick-prev,
+.popularAreas .slick-next {
+    display: none !important;
+}
+
+.downtown .slick-prev {
+    left: initial;
+    right: 130px;
+    z-index: 100;
+    top: -3%;
+}
+.downtown .slick-next {
+    right: 35px;
+    z-index: 100;
+    top: -3%;
+}
+
+@media screen and (max-width: 768px) {
+    .popularAreas .slick-next {
+        right: 15px;
+        z-index: 100;
+        top: -5%;
+    }
+}
+
+.slick-slider .slick-track {
+    padding-left: 16px;
+}
