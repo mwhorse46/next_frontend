@@ -10,7 +10,7 @@ const nextConfig = {
 
     ignoreDuringBuilds: true,
   },
-  distDir: 'build',
+  distDir: '.next',
 }
 
 module.exports = nextConfig

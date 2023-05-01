@@ -149,7 +149,7 @@ const SimilarCarousel = ({data, title}) => {
                                     </Typography>
                                 }
                                 {title === 'ourJournal' &&
-                                    <Box mt={6} mx={2} className="outJ">
+                                    <Box mt={6} mx={2}>
                                         <Typography variant='h4' sx={{
                                             fontFamily: 'Cormorant Garamond',
                                             fontSize: 20,
