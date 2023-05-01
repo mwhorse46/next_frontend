@@ -100,7 +100,7 @@ const SimilarCarousel = ({data, title}) => {
 
     return ( 
         <div className="block">
-            <Slider {... title==='similarProperty' ? settings : settings1 } ref={slider}>
+            <Slider {... title==='similarProperty' ? settings : settings1 } ref={slider} className={(title === 'ourJournal' || title === 'offPlan') && 'ourJournal'}>
                 {
                     data.map((item,index)=>(
                         <Box px={ title === 'similarProperty' ? 7 : 2 } key={index} sx={{
@@ -149,7 +149,7 @@ const SimilarCarousel = ({data, title}) => {
                                     </Typography>
                                 }
                                 {title === 'ourJournal' &&
-                                    <Box mt={6} mx={2}>
+                                    <Box mt={6} mx={2} className="outJ">
                                         <Typography variant='h4' sx={{
                                             fontFamily: 'Cormorant Garamond',
                                             fontSize: 20,
