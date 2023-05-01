@@ -297,6 +297,15 @@ select option {
     transition: 0.2s ease-in all;
 }
 
+.featuredApartments .slick-prev,
+.featuredApartments .slick-next {
+    visibility: hidden;
+}
+
+.slick-current:hover .slick-prev,
+.slick-current:hover .slick-next {
+    visibility: visible;
+}
 
 .featuredApartments .slick-prev {
     left: 15px;
